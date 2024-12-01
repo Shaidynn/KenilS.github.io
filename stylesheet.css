@@ -1,344 +1,348 @@
+/* Base Styling */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #2d3436; /* Dark charcoal background for depth */
-    color: #ecf0f1; /* Off-white text for readability */
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(to bottom right, #eef2f3, #d7e1ec);
+    color: #333;
     margin: 0;
     padding: 0;
-    overflow-x: hidden; /* Prevent horizontal scroll */
-}
-
-h1, h3 {
-    text-align: center;
-    color: #1e90ff; /* Electric blue for headers */
-    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
+    overflow-x: hidden;
 }
 
 /* Header Styling */
 header {
-    background: linear-gradient(135deg, #1e90ff, #ff6f61); /* Gradient background */
-    padding: 40px;
+    background: linear-gradient(to right, #ff7eb3, #ff758c, #ff6a63);
+    padding: 60px 20px;
     text-align: center;
-    border-bottom: 5px solid #f1c40f; /* Bright yellow border */
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    animation: slide-down 1.2s ease;
+}
+
+header h1 {
+    font-size: 3.5rem;
+    margin: 0;
+    animation: fade-in 1.5s ease;
 }
 
 header h4 {
-    color: #ecf0f1;
-    font-size: 1.2rem;
-    font-weight: 400;
-    margin-top: 10px;
+    font-size: 1.3rem;
+    font-weight: 300;
+    margin-top: 15px;
+    max-width: 800px;
+    margin: 20px auto 0;
+    line-height: 1.8;
+    animation: fade-in 2s ease;
 }
 
-/* Experience Section Styling */
-.experience {
-    margin: 20px;
-    padding: 30px;
-    background: linear-gradient(145deg, #333333, #555555); /* Subtle gradient background */
-    border-radius: 15px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.experience:hover {
-    transform: scale(1.05);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
-}
-
-.experience h3 {
-    font-size: 1.6rem;
-    color: #f1c40f; /* Bright yellow for the section title */
-    animation: fadeIn 1s ease-out;
-}
-
-.experience a {
-    color: #00bcd4; /* Cyan link color */
+header a {
+    color: #fff176;
     text-decoration: none;
     font-weight: bold;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
-.experience a:hover {
-    color: #ff007f; /* Neon pink when hovering over links */
+header a:hover {
+    color: #ffecb3;
+    transform: scale(1.1);
 }
 
-/* Certifications Section */
-.certification {
-    margin: 20px;
+/* Light/Dark Mode Button */
+button#mode-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: linear-gradient(135deg, #4facfe, #00f2fe);
+    border: none;
+    padding: 10px 15px;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+button#mode-toggle:hover {
+    transform: rotate(360deg);
+    background: linear-gradient(135deg, #21d4fd, #b721ff);
+}
+
+/* Section Styling */
+section {
+    margin: 50px auto;
     padding: 30px;
-    background: linear-gradient(145deg, #333333, #555555);
-    border-radius: 15px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 1200px;
+    text-align: center;
 }
 
-.certification:hover {
-    transform: scale(1.05);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
-}
-
-.certification h3 {
-    font-size: 1.6rem;
-    color: #f1c40f;
-    animation: fadeIn 1s ease-out;
-}
-
-.certification a {
-    color: #00bcd4;
-    text-decoration: none;
+section h1 {
+    font-size: 2.8rem;
+    margin-bottom: 25px;
+    color: #5f72be;
     font-weight: bold;
-    transition: color 0.3s ease;
+    background: linear-gradient(to right, #43cea2, #185a9d);
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: gradient-fade 3s infinite ease-in-out;
 }
 
-.certification a:hover {
-    color: #ff007f;
-}
-
-/* Skills Section */
-.skill {
-    margin: 20px;
-    padding: 30px;
-    background: linear-gradient(145deg, #333333, #555555);
+/* Card Styling for Experiences, Certifications, Skills */
+.experience, .certification, .skill {
+    margin: 30px auto;
+    padding: 40px;
     border-radius: 15px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    max-width: 900px;
 }
 
-.skill:hover {
-    transform: scale(1.05);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+.experience:hover, .certification:hover, .skill:hover {
+    transform: translateY(-8px) rotate(1deg);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
 }
 
-.skill h3 {
+.experience h3, .certification h3, .skill h3 {
     font-size: 1.6rem;
-    color: #f1c40f;
-    animation: fadeIn 1s ease-out;
+    margin-bottom: 20px;
 }
 
-.skill a {
-    color: #00bcd4;
+.experience ul, .certification ul, .skill ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    line-height: 1.8;
+    color: #666;
+}
+
+.experience a, .certification a, .skill a {
+    color: #007bff;
+    font-weight: 500;
     text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
-.skill a:hover {
-    color: #ff007f;
+.experience a:hover, .certification a:hover, .skill a:hover {
+    color: #ff6a63;
+    transform: scale(1.1);
 }
+
 
 /* Contact Form Styling */
 #contact {
-    background: #2d3436;
-    padding: 40px;
+    background: var(--contact);
     border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-    max-width: 600px;
-    margin: 40px auto;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-
-#contact:hover {
-    transform: scale(1.05);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+    padding: 50px;
+    max-width: 800px;
+    margin: 50px auto;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    animation: pop-in 1s ease forwards;
 }
 
 #contact h3 {
-    font-size: 2rem;
-    text-align: center;
-    margin-bottom: 20px;
-    color: #f1c40f;
-    animation: fadeIn 1s ease-out;
+    font-size: 2.2rem;
+    color: #ffffff;
+    margin-bottom: 30px;
 }
 
 form {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    animation: slideIn 1s ease-out;
 }
 
 form input, form textarea {
     padding: 15px;
-    font-size: 1.1rem;
-    border: 2px solid #1e90ff; /* Electric blue borders */
-    border-radius: 10px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
     outline: none;
-    transition: border 0.3s ease, box-shadow 0.3s ease;
+    background: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 form input:focus, form textarea:focus {
-    border-color: #ff6f61; /* Coral on focus */
-    box-shadow: 0 0 10px rgba(255, 111, 97, 0.6); /* Subtle coral shadow on focus */
-}
-
-form input::placeholder, form textarea::placeholder {
-    color: #888;
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.4);
+    transform: scale(1.02);
 }
 
 form button {
     padding: 15px;
-    font-size: 1.1rem;
-    background-color: #f1c40f;
-    color: #2d3436;
+    font-size: 1.2rem;
     border: none;
     border-radius: 10px;
+    background: var(--button);
+    color: white;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    transition: background 0.4s ease, transform 0.2s ease;
 }
 
 form button:hover {
-    background-color: #ff007f; /* Neon pink on hover */
-    transform: translateY(-2px);
-}
-
-form button:active {
-    transform: translateY(0);
-}
-
-/* Animations */
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes slideIn {
-    0% {
-        opacity: 0;
-        transform: translateX(-20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-
-/* Default (Dark Mode) */
-:root {
-    --bg-color-dark: #1e1e1e; /* Dark background for dark mode */
-    --bg-color-light: #ffffff; /* White background for light mode */
-    --text-color-dark: #ffffff; /* White text for dark mode */
-    --text-color-light: #000000; /* Black text for light mode */
-    --box-bg-color-dark: #333333; /* Dark boxes for dark mode */
-    --box-bg-color-light: #ffffff; /* Light boxes for light mode */
-    --primary-color: #1e90ff; /* Primary color */
-    --secondary-color: #ff6f61; /* Secondary color */
-    --accent-color: #f1c40f; /* Accent color */
-    --link-color: #00bcd4; /* Link color */
-    --hover-color: #ff007f; /* Hover color */
-    --input-border-color: #1e90ff; /* Input border color */
-    --button-bg-color: #f1c40f; /* Button background color */
-    --button-hover-color: #ff007f; /* Button hover color */
-}
-
-/* Light Mode Colors */
-[data-theme="light"] {
-    --bg-color: var(--bg-color-light);
-    --text-color: var(--text-color-light);
-    --box-bg-color: var(--box-bg-color-light);
-}
-
-/* Dark Mode Colors */
-[data-theme="dark"] {
-    --bg-color: var(--bg-color-dark);
-    --text-color: var(--text-color-dark);
-    --box-bg-color: var(--box-bg-color-dark);
-}
-
-light {
-    --bg-color: var(--bg-color-dark);
-    --text-color: var(--text-color-dark);
-    background-color: white;
-
-}
-
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-    transition: background-color 0.5s ease, color 0.5s ease; /* Smooth transition */
-}
-
-h1, h3 {
-    text-align: center;
-    color: var(--primary-color);
-    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
-}
-
-/* Header Styling */
-header {
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    padding: 40px;
-    text-align: center;
-    border-bottom: 5px solid var(--accent-color);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-}
-
-header h4 {
-    color: var(--text-color);
-    font-size: 1.2rem;
-    font-weight: 400;
-    margin-top: 10px;
-}
-
-.mode-toggle {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    color: var(--text-color);
-    cursor: pointer;
-    transition: transform 0.3s ease;
-}
-
-.mode-toggle:hover {
+    background: linear-gradient(to right, #6a11cb, #2575fc);
     transform: scale(1.1);
 }
 
-/* Experience, Certification, and Skills Sections */
-.experience, .certification, .skill {
-    margin: 20px;
-    padding: 30px;
-    background-color: var(--box-bg-color);
+
+/* Animations */
+@keyframes slide-down {
+    from {
+        transform: translateY(-50%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes pop-in {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes gradient-fade {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Default Variables (Light Mode) */
+:root {
+    --background: #ffffff;
+    --foreground: #ffffff;
+    --text: #000000; /* Black text for light mode */
+    --char: white;
+    --date-text: #ffffff; /* Darker gray for dates */
+    --border: #cccccc; /* Light border color for light mode */
+    --header-bg: linear-gradient(to right, #ff7eb3, #ff758c, #ff6a63);
+    --card-bg: linear-gradient(145deg, #ffffff, #e6e6e6);
+    --button-bg: linear-gradient(135deg, #4facfe, #00f2fe);
+    --button-hover-bg: linear-gradient(135deg, #21d4fd, #b721ff);
+    --contact: linear-gradient(to right, #ff7eb3, #ff758c, #ff6a63);
+    --button: linear-gradient(to right, blue, magenta);
+}
+
+/* Dark Mode Variables */
+body.dark-mode {
+    --background: #121212;
+    --foreground: #333333;
+    --text: #ffffff; /* White text for dark mode */
+    --char: black;
+    --date-text: #ffffff; /* White text for dates in dark mode */
+    --border: #000000; /* Black borders in dark mode */
+    --header-bg: linear-gradient(to left, #ff7eb3, #ff758c, #ff6a63);
+    --card-bg: linear-gradient(145deg, #1e1e1e, #2c2c2c);
+    --button-bg: linear-gradient(135deg, #667db6, #485563);
+    --button-hover-bg: linear-gradient(135deg, #232526, #485563);
+    --contact: linear-gradient(to right, #185a9d, #43cea2);
+    --button: linear-gradient(to right, purple, darkblue);
+
+
+}
+
+
+/* Apply Variables */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: var(--background);
+    color: var(--text); /* Apply text color globally */
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Header */
+header {
+    background: var(--header-bg);
+    padding: 60px 20px;
+    text-align: center;
+    color: var(--text); /* Use text variable */
+}
+
+/* Section Content */
+section {
+    padding: 20px;
+}
+
+h1, h3, h4, ul, li {
+    color: var(--text); /* Ensure all headings and list items follow the text color */
+}
+
+#b1, #b2 {
+    color: var(--char);
+
+}
+
+/* Dates in Experiences */
+.experience-date {
+    color: var(--date-text); /* Dates adapt to light/dark mode */
+}
+
+/* Borders for Certifications and Skills */
+.certifications,
+.skills {
+    border: 2px solid var(--border); /* Dynamic border color */
+    padding: 15px;
+    border-radius: 10px;
+    transition: border-color 0.3s ease;
+}
+
+/* Buttons */
+button#mode-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: var(--button-bg);
+    border: none;
+    padding: 10px 15px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+button#mode-toggle:hover {
+    background: var(--button-hover-bg);
+    transform: rotate(360deg);
+}
+
+/* Cards */
+.experience {
+    margin: 30px auto;
+    padding: 40px;
+    background: var(--card-bg);
     border-radius: 15px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    color: var(--text); /* Ensure card content matches the text color */
 }
 
-/* Link and button styles */
-a, button {
-    color: var(--link-color);
-    transition: color 0.3s ease;
+/* Footer */
+footer {
+    text-align: center;
+    background: var(--foreground);
+    padding: 20px;
+    font-size: 0.9rem;
+    color: var(--text);
 }
-
-a:hover, button:hover {
-    color: var(--hover-color);
-}
-
-/* Button Styling */
-form button {
-    background-color: var(--button-bg-color);
-    color: var(--bg-color);
-}
-
-/* Form input focus */
-form input:focus, form textarea:focus {
-    border-color: var(--input-border-color);
-    box-shadow: 0 0 10px rgba(255, 111, 97, 0.6);
-}
-
-
-
 
 
 
