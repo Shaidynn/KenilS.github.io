@@ -1,0 +1,355 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #2d3436; /* Dark charcoal background for depth */
+    color: #ecf0f1; /* Off-white text for readability */
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+h1, h3 {
+    text-align: center;
+    color: #1e90ff; /* Electric blue for headers */
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
+}
+
+/* Header Styling */
+header {
+    background: linear-gradient(135deg, #1e90ff, #ff6f61); /* Gradient background */
+    padding: 40px;
+    text-align: center;
+    border-bottom: 5px solid #f1c40f; /* Bright yellow border */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+header h4 {
+    color: #ecf0f1;
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-top: 10px;
+}
+
+/* Experience Section Styling */
+.experience {
+    margin: 20px;
+    padding: 30px;
+    background: linear-gradient(145deg, #333333, #555555); /* Subtle gradient background */
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.experience:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+}
+
+.experience h3 {
+    font-size: 1.6rem;
+    color: #f1c40f; /* Bright yellow for the section title */
+    animation: fadeIn 1s ease-out;
+}
+
+.experience a {
+    color: #00bcd4; /* Cyan link color */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.experience a:hover {
+    color: #ff007f; /* Neon pink when hovering over links */
+}
+
+/* Certifications Section */
+.certification {
+    margin: 20px;
+    padding: 30px;
+    background: linear-gradient(145deg, #333333, #555555);
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.certification:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+}
+
+.certification h3 {
+    font-size: 1.6rem;
+    color: #f1c40f;
+    animation: fadeIn 1s ease-out;
+}
+
+.certification a {
+    color: #00bcd4;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.certification a:hover {
+    color: #ff007f;
+}
+
+/* Skills Section */
+.skill {
+    margin: 20px;
+    padding: 30px;
+    background: linear-gradient(145deg, #333333, #555555);
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+}
+
+.skill h3 {
+    font-size: 1.6rem;
+    color: #f1c40f;
+    animation: fadeIn 1s ease-out;
+}
+
+.skill a {
+    color: #00bcd4;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.skill a:hover {
+    color: #ff007f;
+}
+
+/* Contact Form Styling */
+#contact {
+    background: #2d3436;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    max-width: 600px;
+    margin: 40px auto;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+#contact:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+}
+
+#contact h3 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #f1c40f;
+    animation: fadeIn 1s ease-out;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    animation: slideIn 1s ease-out;
+}
+
+form input, form textarea {
+    padding: 15px;
+    font-size: 1.1rem;
+    border: 2px solid #1e90ff; /* Electric blue borders */
+    border-radius: 10px;
+    outline: none;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+form input:focus, form textarea:focus {
+    border-color: #ff6f61; /* Coral on focus */
+    box-shadow: 0 0 10px rgba(255, 111, 97, 0.6); /* Subtle coral shadow on focus */
+}
+
+form input::placeholder, form textarea::placeholder {
+    color: #888;
+}
+
+form button {
+    padding: 15px;
+    font-size: 1.1rem;
+    background-color: #f1c40f;
+    color: #2d3436;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+form button:hover {
+    background-color: #ff007f; /* Neon pink on hover */
+    transform: translateY(-2px);
+}
+
+form button:active {
+    transform: translateY(0);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+/* Default (Dark Mode) */
+:root {
+    --bg-color-dark: #1e1e1e; /* Dark background for dark mode */
+    --bg-color-light: #ffffff; /* White background for light mode */
+    --text-color-dark: #ffffff; /* White text for dark mode */
+    --text-color-light: #000000; /* Black text for light mode */
+    --box-bg-color-dark: #333333; /* Dark boxes for dark mode */
+    --box-bg-color-light: #ffffff; /* Light boxes for light mode */
+    --primary-color: #1e90ff; /* Primary color */
+    --secondary-color: #ff6f61; /* Secondary color */
+    --accent-color: #f1c40f; /* Accent color */
+    --link-color: #00bcd4; /* Link color */
+    --hover-color: #ff007f; /* Hover color */
+    --input-border-color: #1e90ff; /* Input border color */
+    --button-bg-color: #f1c40f; /* Button background color */
+    --button-hover-color: #ff007f; /* Button hover color */
+}
+
+/* Light Mode Colors */
+[data-theme="light"] {
+    --bg-color: var(--bg-color-light);
+    --text-color: var(--text-color-light);
+    --box-bg-color: var(--box-bg-color-light);
+}
+
+/* Dark Mode Colors */
+[data-theme="dark"] {
+    --bg-color: var(--bg-color-dark);
+    --text-color: var(--text-color-dark);
+    --box-bg-color: var(--box-bg-color-dark);
+}
+
+light {
+    --bg-color: var(--bg-color-dark);
+    --text-color: var(--text-color-dark);
+    background-color: white;
+
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    transition: background-color 0.5s ease, color 0.5s ease; /* Smooth transition */
+}
+
+h1, h3 {
+    text-align: center;
+    color: var(--primary-color);
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
+}
+
+/* Header Styling */
+header {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    padding: 40px;
+    text-align: center;
+    border-bottom: 5px solid var(--accent-color);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+header h4 {
+    color: var(--text-color);
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-top: 10px;
+}
+
+.mode-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--text-color);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.mode-toggle:hover {
+    transform: scale(1.1);
+}
+
+/* Experience, Certification, and Skills Sections */
+.experience, .certification, .skill {
+    margin: 20px;
+    padding: 30px;
+    background-color: var(--box-bg-color);
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Link and button styles */
+a, button {
+    color: var(--link-color);
+    transition: color 0.3s ease;
+}
+
+a:hover, button:hover {
+    color: var(--hover-color);
+}
+
+/* Button Styling */
+form button {
+    background-color: var(--button-bg-color);
+    color: var(--bg-color);
+}
+
+/* Form input focus */
+form input:focus, form textarea:focus {
+    border-color: var(--input-border-color);
+    box-shadow: 0 0 10px rgba(255, 111, 97, 0.6);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
